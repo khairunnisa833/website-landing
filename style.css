@@ -10,13 +10,13 @@
   --kuning: #b6a50b;
 }
 body {
-  height: 4000px;
+  /* height: 4000px; */
 }
 .header {
   width: 100%;
   height: 100vh;
   background-color: #eaeaea;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/jumbo.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(img/jumbo2.png);
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
@@ -57,21 +57,28 @@ nav h3 {
   left: 10%;
   bottom: -4px;
   position: absolute;
-  background: red;
+  background: var(--kuning);
 }
 .navbar ul li:hover a::after {
   width: 80%;
 }
 .btn {
   padding: 7px 30px;
-
+  transition: 0.3s;
   border-radius: 10px;
-  border: none;
+  border: 2px solid var(--kuning);
   outline: none;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-size: 13px;
   display: inline-block;
+}
+.btn:hover {
+  background-color: var(--kuning);
+  color: #fff;
+}
+.btn.satu {
+  padding: 5px 15px;
 }
 .header-left {
   top: 50%;
@@ -87,6 +94,8 @@ nav h3 {
 }
 .header-left h1 {
   font-size: 30px;
+  color: #fff;
+  text-shadow: 0px 0px 10px var(--kuning);
 }
 .btn.dua {
   padding: 6px 24px;
@@ -119,7 +128,7 @@ nav .bi {
     top: 0;
     right: -200px;
     width: 200px;
-    background-color: red;
+    background-color: var(--kuning);
     height: 100vh;
     padding: 50px 0;
     z-index: 2;
@@ -156,7 +165,7 @@ nav .bi {
     display: none;
   }
   .header-left h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
   .header-left p {
     font-size: 14px;
@@ -166,6 +175,10 @@ nav .bi {
   }
   .header-left {
     text-align: center;
+  }
+  .btn {
+    padding: 5px 14px;
+    font-size: 12px;
   }
 }
 
@@ -246,17 +259,22 @@ nav .bi {
 .kotak {
   padding-top: 100px;
   padding-bottom: 50px;
-  display: flex;
-  align-items: center;
 }
 .kotak-box {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.kotak-box .box:nth-child(1) {
+  flex-direction: 35%;
+  width: 100%;
+}
+.kotak-box .box:nth-child(2) {
+  flex-direction: 60%;
+  margin-left: 5%;
 }
 .box img {
   width: 100%;
-  height: 300px;
   border-radius: 10px;
 }
 .box h1 {
@@ -284,11 +302,20 @@ nav .bi {
   transform: translate(20px, 20px);
   opacity: 0.7;
 }
+.kotak-box .box {
+  margin-bottom: 40px;
+}
 
-@media (max-width: 475px) {
-  .kotak-box {
+@media (max-width: 600px) {
+  /* .kotak-box {
     display: grid;
     grid-template-columns: 1fr;
+  } */
+  .kotak-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .kotak .box h1 {
     font-size: 20px;
@@ -297,12 +324,7 @@ nav .bi {
     font-size: 13px;
   }
 }
-@media (max-width: 600px) {
-  .kotak-box {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
+
 /* kotak */
 
 /* services */
@@ -369,8 +391,8 @@ nav .bi {
 .avai {
   width: 100%;
   min-height: 60vh;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 .avai-col {
   width: 100%;
@@ -479,7 +501,7 @@ nav .bi {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 .testimonial-box {
   flex-basis: 48%;
@@ -507,6 +529,9 @@ nav .bi {
 .testi-icon {
   padding: 7px 0 5px;
 }
+.testimonial .bi {
+  color: rgb(243, 65, 0);
+}
 @media (max-width: 768px) {
   .testimonial-kotak {
     flex-direction: column;
@@ -521,6 +546,15 @@ nav .bi {
     font-size: 14px;
   }
 }
+@media (max-width: 468px) {
+  .testimonial-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
 /* testimonial end */
 
 /* footer */
@@ -528,9 +562,31 @@ nav .bi {
   width: 100%;
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 20px;
 }
 .footer p {
-  font-size: 14px;
+  font-size: 13px;
+  margin-top: 10px;
 }
+.footer .bi {
+  font-size: 22px;
+  color: var(--kuning);
+  margin-left: 5px;
+  margin-bottom: -10px;
+  margin-top: 7px;
+  display: inline-block;
+}
+@media (max-width: 468px) {
+  .footer p {
+    font-size: 12px;
+    padding: 15px 0 10px;
+  }
+  .footer .bi {
+    font-size: 15px;
+  }
+}
+.footer .copyright {
+  padding: 10px 0;
+  font-size: 13px;
+}
+
 /* foter end */
