@@ -14,11 +14,12 @@
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="header">
+    <section class="header" id="home">
       <div class="container">
         <nav>
           <div class="logo">
@@ -27,11 +28,11 @@
           <div class="navbar">
             <ul id="navbar">
               <i class="bi bi-x-lg" onclick="hideMenu()"></i>
-              <li><a href="#">home</a></li>
-              <li><a href="#">about</a></li>
-              <li><a href="#">services</a></li>
-              <li><a href="#">fortofolio</a></li>
-              <li><a href="#">contact</a></li>
+              <li><a href="#home">home</a></li>
+              <li><a href="#house">Our House</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#testimonial">Testimonials</a></li>
             </ul>
           </div>
           <button type="button" class="btn satu">Kirim</button>
@@ -39,11 +40,11 @@
         </nav>
 
         <div class="header-left">
-          <h1>
+          <h1 data-aos="fade-up" data-aos-duration="1000">
             Gaya Ikonik <br />
             Berkualitas Tinggi
           </h1>
-          <p>
+          <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             Fila, merek legendaris yang terkenal dengan gaya yang ikonik dan kualitas yang tak tertandingi. Temukan koleksi kami yang menawan dengan desain inovatif yang selalu memukau mata dan teknologi terbaru untuk kenyamanan optimal.
           </p>
           <button type="submit" class="btn">Download CV</button>
@@ -51,10 +52,10 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="house">
       <div class="container">
-        <h1>most viewed</h1>
-        <p class="judul">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <h1 data-aos="fade-up" data-aos-duration="1000">most viewed</h1>
+        <p class="judul" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -103,37 +104,37 @@
       </div>
     </section>
 
-    <section class="kotak">
+    <section class="kotak" id="about">
       <div class="container">
         <div class="kotak-box">
-          <div class="box">
+          <div class="box" data-aos="fade-right" data-aos-duration="1000">
             <img src="img/img1.png" alt="kotak" width="350px" height="350px" />
           </div>
           <div class="box">
-            <h1>Find Your Dreams <br />House With Us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequuntur veniam laudantium quaerat facilis facere!</p>
+            <h1 data-aos="fade-up" data-aos-duration="1000">Find Your Dreams <br />House With Us</h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequuntur veniam laudantium quaerat facilis facere!</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque asperiores corrupti rerum quidem dolore suscipit repellendus consequuntur possimus illo, quas et .</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
       <div class="container">
-        <h1>Our Work in Golden</h1>
-        <p class="judul">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ex.</p>
+        <h1 data-aos="fade-up" data-aos-duration="1000">Our Work in Golden</h1>
+        <p class="judul" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ex.</p>
         <div class="services-box">
-          <div class="col">
+          <div class="col" data-aos="fade-right" data-aos-duration="1000">
             <span><i class="bi bi-house-fill"></i></span>
             <h4>Researech Phase</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptates, deserunt sed cum sint assumenda dolorum tempore vero fugiat blanditiis esse repudiandae nisi.</p>
           </div>
-          <div class="col">
+          <div class="col" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
             <span><i class="bi bi-browser-edge"></i></span>
             <h4>Researech Phase</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptates, deserunt sed cum sint assumenda dolorum tempore vero fugiat blanditiis esse repudiandae nisi.</p>
           </div>
-          <div class="col">
+          <div class="col" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">
             <span><i class="bi bi-highlights"></i></span>
             <h4>Researech Phase</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptates, deserunt sed cum sint assumenda dolorum tempore vero fugiat blanditiis esse repudiandae nisi.</p>
@@ -158,10 +159,10 @@
 <!-- testimonial -->
   <section class="testimonial" id="testimonial">
     <div class="container">
-      <h3>testimonial</h3>
-      <p class="judul">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse.</p>
+      <h3 data-aos="fade-up" data-aos-duration="1000">testimonial</h3>
+      <p class="judul" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse.</p>
       <div class="testimonial-kotak">
-      <div class="testimonial-box">
+      <div class="testimonial-box" data-aos="fade-right" data-aos-duration="1000">
         <img src="img/wnt1.png" alt="wanita1" width="120px" height="120px">
         <div class="review">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sed, ipsam repudiandae magnam sapiente exercitationem, aut rem unde quidem autem quibusdam quos asperiores debitis perspiciatis.</p>
@@ -177,7 +178,7 @@
 
         </div>
       </div>
-      <div class="testimonial-box">
+      <div class="testimonial-box" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
         <img src="img/wnt3.png" alt="wanita1" width="120px" height="120px">
         <div class="review">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sed, ipsam repudiandae magnam sapiente exercitationem, aut rem unde quidem autem quibusdam quos asperiores debitis perspiciatis.</p>
@@ -226,6 +227,12 @@
     <!-- swipper -->
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <!-- Initialize Swiper -->
     <script>
