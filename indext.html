@@ -35,8 +35,11 @@
               <li><a href="#testimonial">Testimonials</a></li>
             </ul>
           </div>
-          <button type="button" class="btn satu">Kirim</button>
-          <i class="bi bi-list" onclick="showMenu()"></i>
+          <div class="nav-ujung">
+            <button type="button" class="btn satu">Kirim</button>
+            <i class="bi bi-list" onclick="showMenu()" id="menu"></i>
+          </div>
+          
         </nav>
 
         <div class="header-left">
@@ -47,7 +50,7 @@
           <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             Fila, merek legendaris yang terkenal dengan gaya yang ikonik dan kualitas yang tak tertandingi. Temukan koleksi kami yang menawan dengan desain inovatif yang selalu memukau mata dan teknologi terbaru untuk kenyamanan optimal.
           </p>
-          <button type="submit" class="btn">Download CV</button>
+          <button type="submit" class="btn" data-aos="fade-up" data-aos-duration="1000" >Download CV</button>
         </div>
       </div>
     </section>
@@ -108,7 +111,7 @@
       <div class="container">
         <div class="kotak-box">
           <div class="box" data-aos="fade-right" data-aos-duration="1000">
-            <img src="img/img1.png" alt="kotak" width="350px" height="350px" />
+            <img src="img/img1.png" alt="kotak" />
           </div>
           <div class="box">
             <h1 data-aos="fade-up" data-aos-duration="1000">Find Your Dreams <br />House With Us</h1>
@@ -144,8 +147,8 @@
     </section>
     <!-- available -->
     <section class="avai">
-      <div class="container">
-        <div class="avai-col">
+      <div class="container" data-aos="flip-up" data-aos-duration="1000">
+        <div class="avai-col" >
           <h2>We Are Also Available The Apps</h2>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat, quos.</p>
           <div class="icon">
@@ -222,6 +225,14 @@
       function hideMenu() {
         navlinks.style.right = "-200px";
       }
+
+      let menu = document.querySelector('#menu');
+      document.addEventListener('click', function (e) {
+        if(!navlinks.contains(e.target) && !menu.contains(e.target)) {
+       hideMenu();
+}
+      });
+      
     </script>
 
     <!-- swipper -->
